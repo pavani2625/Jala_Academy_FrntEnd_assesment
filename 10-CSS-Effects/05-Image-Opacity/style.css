@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.image-container {
+    margin-top: 30px;
+}
+
+img {
+    width: 600px;
+    max-width: 100%;
+
+    /* Normal opacity */
+    opacity: 0.7;
+
+    transition: opacity 0.4s ease;
+}
+
+/* Full opacity on hover */
+img:hover {
+    opacity: 1;
+}

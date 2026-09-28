@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Object Prototypes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            padding: 25px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Object Prototypes</h1>
+
+        <div class="card">
+
+            <h2>Employee Details</h2>
+
+            <p id="name"></p>
+            <p id="role"></p>
+            <p id="city"></p>
+            <p id="experience"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Existing constructor function
+        function Employee(name, role) {
+
+            this.name = name;
+            this.role = role;
+
+        }
+
+
+        // Adding properties using prototype
+        Employee.prototype.city = "Hyderabad";
+
+        Employee.prototype.experience = "Fresher";
+
+
+        // Creating an object
+        let employee =
+            new Employee(
+                "Razeena",
+                "Software Developer"
+            );
+
+
+        // Display values
+        document.getElementById("name").textContent =
+            "Name: " + employee.name;
+
+        document.getElementById("role").textContent =
+            "Role: " + employee.role;
+
+        document.getElementById("city").textContent =
+            "City: " + employee.city;
+
+        document.getElementById("experience").textContent =
+            "Experience: " + employee.experience;
+
+    </script>
+
+</body>
+
+</html>

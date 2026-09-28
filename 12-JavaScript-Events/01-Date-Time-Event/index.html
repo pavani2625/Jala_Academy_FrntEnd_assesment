@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Date and Time Event</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #dateTime {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Current Date and Time</h1>
+
+        <button id="dateButton">
+            Show Current Date & Time
+        </button>
+
+        <div id="dateTime"></div>
+
+    </div>
+
+
+    <script>
+
+        const button =
+            document.getElementById("dateButton");
+
+        const dateTime =
+            document.getElementById("dateTime");
+
+
+        button.addEventListener("click", function () {
+
+            const currentDate = new Date();
+
+            dateTime.textContent =
+                currentDate.toLocaleString();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

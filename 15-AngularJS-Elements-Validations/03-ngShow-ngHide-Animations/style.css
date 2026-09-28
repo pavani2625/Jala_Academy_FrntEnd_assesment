@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.box {
+    background-color: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.animated-box {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #e8f4ff;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.animated-box.ng-hide-remove {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.animated-box.ng-hide-remove-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.animated-box.ng-hide-add {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-box.ng-hide-add-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}

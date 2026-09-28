@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="selectApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ng-options vs ng-repeat</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            padding: 10px;
+            width: 250px;
+            margin-top: 10px;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-controller="SelectController">
+
+    <div class="container">
+
+        <h1>ng-options vs ng-repeat</h1>
+
+
+        <!-- ng-options -->
+
+        <div class="card">
+
+            <h2>Using ng-options</h2>
+
+            <select
+                ng-model="selectedOption"
+                ng-options="student.name for student in students">
+
+                <option value="">
+                    -- Select Student --
+                </option>
+
+            </select>
+
+            <p class="result">
+                Selected:
+                {{ selectedOption.name }}
+            </p>
+
+        </div>
+
+
+        <!-- ng-repeat -->
+
+        <div class="card">
+
+            <h2>Using ng-repeat</h2>
+
+            <select ng-model="selectedRepeat">
+
+                <option value="">
+                    -- Select Student --
+                </option>
+
+                <option
+                    ng-repeat="student in students"
+                    value="{{ student.name }}">
+
+                    {{ student.name }}
+
+                </option>
+
+            </select>
+
+            <p class="result">
+                Selected:
+                {{ selectedRepeat }}
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

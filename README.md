@@ -1,1 +1,1 @@
-# Assesments
+# JALA-Academy-Frontend-Assignments

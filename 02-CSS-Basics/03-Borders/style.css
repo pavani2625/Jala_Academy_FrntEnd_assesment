@@ -1,0 +1,39 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 50px;
+}
+
+/* Center the content */
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Different border styles on each side */
+.border-box {
+    background-color: white;
+
+    /* Top border */
+    border-top: 5px solid #2563eb;
+
+    /* Right border */
+    border-right: 8px dashed #16a34a;
+
+    /* Bottom border */
+    border-bottom: 6px dotted #dc2626;
+
+    /* Left border */
+    border-left: 10px double #9333ea;
+
+    padding: 40px;
+    margin-top: 30px;
+}
+
+/* Heading */
+.border-box h2 {
+    color: #333;
+}

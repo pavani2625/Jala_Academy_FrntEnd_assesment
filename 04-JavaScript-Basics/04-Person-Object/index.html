@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Person Object</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Person Object</h1>
+
+        <div class="result">
+
+            <h2>Dot Notation</h2>
+
+            <p id="dotNotation"></p>
+
+            <h2>Bracket Notation</h2>
+
+            <p id="bracketNotation"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let person = {
+            firstname: "Razeena",
+            lastname: "Nishad"
+        };
+
+        // First way: Dot notation
+        let firstMethod =
+            person.firstname + " " + person.lastname;
+
+        // Second way: Bracket notation
+        let secondMethod =
+            person["firstname"] + " " + person["lastname"];
+
+        document.getElementById("dotNotation").textContent =
+            firstMethod;
+
+        document.getElementById("bracketNotation").textContent =
+            secondMethod;
+
+    </script>
+
+</body>
+
+</html>

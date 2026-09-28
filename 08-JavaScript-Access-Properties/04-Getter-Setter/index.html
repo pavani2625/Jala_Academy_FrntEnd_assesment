@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Getter and Setter Counter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .counter-box {
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        #count {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="counter-box">
+
+        <h1>Getter & Setter Counter</h1>
+
+        <div id="count">0</div>
+
+        <button onclick="increaseCount()">
+            Count
+        </button>
+
+    </div>
+
+    <script>
+
+        let counter = {
+
+            _count: 0,
+
+            // Getter
+            get count() {
+                return this._count;
+            },
+
+            // Setter
+            set count(value) {
+                this._count = value;
+            }
+
+        };
+
+
+        function increaseCount() {
+
+            counter.count = counter.count + 1;
+
+            document.getElementById("count").textContent =
+                counter.count;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

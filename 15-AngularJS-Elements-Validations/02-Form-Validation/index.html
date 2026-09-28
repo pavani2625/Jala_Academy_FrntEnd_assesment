@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="validationApp">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Form Validation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+
+<body ng-controller="ValidationController">
+
+    <div class="container">
+
+        <h1>AngularJS Form Validation</h1>
+
+
+        <form name="studentForm"
+              ng-submit="submitForm()"
+              novalidate>
+
+
+            <!-- Required validation -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    ng-model="student.name"
+                    required>
+
+                <div class="error"
+                     ng-show="studentForm.name.$touched &&
+                              studentForm.name.$error.required">
+
+                    Name is required.
+
+                </div>
+
+            </div>
+
+
+            <!-- Email validation -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    ng-model="student.email"
+                    required>
+
+                <div class="error"
+                     ng-show="studentForm.email.$touched &&
+                              studentForm.email.$error.required">
+
+                    Email is required.
+
+                </div>
+
+                <div class="error"
+                     ng-show="studentForm.email.$touched &&
+                              studentForm.email.$error.email">
+
+                    Please enter a valid email address.
+
+                </div>
+
+            </div>
+
+
+            <!-- Custom validation -->
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    ng-model="student.username"
+                    ng-minlength="5"
+                    required>
+
+                <div class="error"
+                     ng-show="studentForm.username.$touched &&
+                              studentForm.username.$error.required">
+
+                    Username is required.
+
+                </div>
+
+                <div class="error"
+                     ng-show="studentForm.username.$touched &&
+                              studentForm.username.$error.minlength">
+
+                    Username must contain at least 5 characters.
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                ng-disabled="studentForm.$invalid">
+
+                Submit
+
+            </button>
+
+
+            <div class="success"
+                 ng-show="submitted">
+
+                Form submitted successfully!
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

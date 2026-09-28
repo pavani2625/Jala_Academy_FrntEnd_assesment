@@ -1,0 +1,48 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Common box styling */
+.box {
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Width and height using pixels */
+.pixel-box {
+    width: 400px;
+    height: 200px;
+
+    background-color: #dbeafe;
+    border: 3px solid #2563eb;
+}
+
+/* Parent container for percentage height */
+.percentage-container {
+    width: 600px;
+    height: 400px;
+
+    margin: 30px auto;
+    border: 2px solid #333;
+}
+
+/* Width and height using percentages */
+.percentage-box {
+    width: 80%;
+    height: 50%;
+
+    background-color: #dcfce7;
+    border: 3px solid #16a34a;
+}

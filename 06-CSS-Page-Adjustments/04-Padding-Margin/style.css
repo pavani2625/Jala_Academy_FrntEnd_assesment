@@ -1,0 +1,37 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Common box styling */
+.box {
+    border: 3px solid #333;
+    background-color: white;
+}
+
+/* Box 1 */
+.box-one {
+    padding: 40px;
+    margin: 20px;
+}
+
+/* Box 2 */
+.box-two {
+    padding: 20px 50px;
+    margin: 40px 10px;
+}
+
+/* Box 3 */
+.box-three {
+    padding: 10px 30px 50px 60px;
+    margin: 10px 30px 50px 70px;
+}

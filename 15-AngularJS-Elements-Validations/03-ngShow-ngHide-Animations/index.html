@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="animationApp">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS ngShow ngHide Animation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-animate.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="AnimationController">
+
+    <div class="container">
+
+        <h1>AngularJS Animations</h1>
+
+        <p>
+            Click the buttons to see animations with
+            ng-show and ng-hide.
+        </p>
+
+
+        <!-- ng-show -->
+
+        <div class="box">
+
+            <h2>ng-show Animation</h2>
+
+            <button ng-click="showBox = !showBox">
+
+                {{ showBox ? "Hide Box" : "Show Box" }}
+
+            </button>
+
+            <div
+                class="animated-box"
+                ng-show="showBox">
+
+                This box uses
+                <strong>ng-show</strong>.
+
+            </div>
+
+        </div>
+
+
+        <!-- ng-hide -->
+
+        <div class="box">
+
+            <h2>ng-hide Animation</h2>
+
+            <button ng-click="hideBox = !hideBox">
+
+                {{ hideBox ? "Show Box" : "Hide Box" }}
+
+            </button>
+
+            <div
+                class="animated-box second"
+                ng-hide="hideBox">
+
+                This box uses
+                <strong>ng-hide</strong>.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

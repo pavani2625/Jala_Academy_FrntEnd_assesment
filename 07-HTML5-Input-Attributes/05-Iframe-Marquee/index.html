@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Iframe and Marquee</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Iframe and Marquee</h1>
+
+
+        <!-- Marquee -->
+
+        <section class="card">
+
+            <h2>Marquee</h2>
+
+            <marquee
+                direction="left"
+                behavior="scroll"
+                scrollamount="5">
+
+                Welcome to my HTML5 assignment!
+                Keep learning and keep practicing.
+
+            </marquee>
+
+        </section>
+
+
+        <!-- Iframe -->
+
+        <section class="card">
+
+            <h2>Iframe</h2>
+
+            <p>
+                The iframe below embeds another webpage.
+            </p>
+
+            <iframe
+                src="https://www.wikipedia.org/"
+                title="Wikipedia"
+                width="100%"
+                height="400">
+            </iframe>
+
+        </section>
+
+
+        <!-- Local iframe -->
+
+        <section class="card">
+
+            <h2>Iframe with HTML Content</h2>
+
+            <iframe
+                srcdoc="
+                    <h2>Content inside iframe</h2>
+                    <p>This content is displayed using srcdoc.</p>
+                "
+                title="Example iframe"
+                width="100%"
+                height="200">
+            </iframe>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

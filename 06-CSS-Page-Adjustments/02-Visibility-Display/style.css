@@ -1,0 +1,69 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+}
+
+/* =========================
+   VISIBILITY
+   ========================= */
+
+/* Visible element */
+.visible-box {
+    visibility: visible;
+    background-color: #dcfce7;
+    padding: 15px;
+}
+
+/* Hidden element - space remains */
+.hidden-box {
+    visibility: hidden;
+    background-color: #fee2e2;
+    padding: 15px;
+}
+
+/* Collapse */
+.collapse-box {
+    visibility: collapse;
+    background-color: #dbeafe;
+    padding: 15px;
+}
+
+/* Completely removes element */
+.none-box {
+    display: none;
+}
+
+/* Inline element */
+.inline-box {
+    display: inline;
+    background-color: #fef3c7;
+    padding: 10px;
+}
+
+/* Block element */
+.block-box {
+    display: block;
+    background-color: #dbeafe;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Contents */
+.contents-box {
+    display: contents;
+}
+
+/* List item */
+.list-item-box {
+    display: list-item;
+    margin-left: 30px;
+}

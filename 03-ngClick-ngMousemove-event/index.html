@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Events</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .box {
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        .mouse-area {
+            height: 200px;
+            background-color: #e8f4ff;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            user-select: none;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-controller="EventController">
+
+    <div class="container">
+
+        <h1>AngularJS Events</h1>
+
+
+        <!-- ng-click -->
+
+        <div class="box">
+
+            <h2>ng-click</h2>
+
+            <button ng-click="increaseCount()">
+                Click Me
+            </button>
+
+            <p class="result">
+                Button clicked:
+                {{ clickCount }} times
+            </p>
+
+        </div>
+
+
+        <!-- ng-mousemove -->
+
+        <div class="box">
+
+            <h2>ng-mousemove</h2>
+
+            <div
+                class="mouse-area"
+                ng-mousemove="mouseMove($event)">
+
+                Move your mouse here
+
+            </div>
+
+            <p class="result">
+                Mouse X: {{ mouseX }}
+                <br>
+                Mouse Y: {{ mouseY }}
+            </p>
+
+        </div>
+
+
+        <!-- $event -->
+
+        <div class="box">
+
+            <h2>$event</h2>
+
+            <button ng-click="showEvent($event)">
+                Show Event Details
+            </button>
+
+            <p class="result">
+                Event Type: {{ eventType }}
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

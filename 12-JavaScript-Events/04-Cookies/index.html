@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Cookies</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Cookies</h1>
+
+        <input
+            type="text"
+            id="cookieValue"
+            placeholder="Enter your name">
+
+        <div>
+
+            <button id="setButton">
+                Set Cookie
+            </button>
+
+            <button id="getButton">
+                Get Cookie
+            </button>
+
+            <button id="checkButton">
+                Check Cookie
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        const input =
+            document.getElementById("cookieValue");
+
+        const result =
+            document.getElementById("result");
+
+
+        // 1. Set a cookie
+        function setCookie(name, value, days) {
+
+            const date = new Date();
+
+            date.setTime(
+                date.getTime() +
+                (days * 24 * 60 * 60 * 1000)
+            );
+
+            document.cookie =
+                name + "=" +
+                encodeURIComponent(value) +
+                ";expires=" +
+                date.toUTCString() +
+                ";path=/";
+        }
+
+
+        // 2. Get a cookie
+        function getCookie(name) {
+
+            const cookies =
+                document.cookie.split(";");
+
+            for (let cookie of cookies) {
+
+                cookie = cookie.trim();
+
+                if (cookie.startsWith(name + "=")) {
+
+                    return decodeURIComponent(
+                        cookie.substring(name.length + 1)
+                    );
+                }
+            }
+
+            return "";
+
+        }
+
+
+        // 3. Check whether a cookie exists
+        function checkCookie(name) {
+
+            const value = getCookie(name);
+
+            return value !== "";
+
+        }
+
+
+        // Set cookie button
+        document.getElementById("setButton")
+            .addEventListener("click", function () {
+
+                const name = input.value.trim();
+
+                if (name === "") {
+
+                    result.textContent =
+                        "Please enter a name.";
+
+                    return;
+                }
+
+                setCookie("username", name, 7);
+
+                result.textContent =
+                    "Cookie has been set.";
+
+            });
+
+
+        // Get cookie button
+        document.getElementById("getButton")
+            .addEventListener("click", function () {
+
+                const username =
+                    getCookie("username");
+
+                if (username) {
+
+                    result.textContent =
+                        "Cookie value: " + username;
+
+                } else {
+
+                    result.textContent =
+                        "Cookie not found.";
+
+                }
+
+            });
+
+
+        // Check cookie button
+        document.getElementById("checkButton")
+            .addEventListener("click", function () {
+
+                if (checkCookie("username")) {
+
+                    result.textContent =
+                        "Username cookie exists.";
+
+                } else {
+
+                    result.textContent =
+                        "Username cookie does not exist.";
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>

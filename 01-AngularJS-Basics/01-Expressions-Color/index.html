@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Basics - Expressions</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+
+    <div class="container">
+
+        <h1>AngularJS Expressions</h1>
+
+        <h2>Expression Evaluation</h2>
+
+        <p>10 + 20 = {{ 10 + 20 }}</p>
+
+        <p>10 × 5 = {{ 10 * 5 }}</p>
+
+        <p>100 ÷ 4 = {{ 100 / 4 }}</p>
+
+        <h2>Change Text Box Background</h2>
+
+        <label>Enter a color:</label>
+
+        <input
+            type="text"
+            ng-model="color"
+            placeholder="Example: red, blue, yellow">
+
+        <div class="result"
+             ng-style="{ 'background-color': color }">
+
+            Entered color: {{ color }}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

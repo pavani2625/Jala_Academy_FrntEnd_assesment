@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsonApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS JSON Table</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .controls {
+            margin: 20px 0;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .even-row {
+            background-color: #e8f4ff;
+        }
+
+        .odd-row {
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+
+<body ng-controller="JsonController">
+
+    <div class="container">
+
+        <h1>AngularJS JSON Student Table</h1>
+
+        <div class="controls">
+
+            <!-- Search/filter -->
+            <input
+                type="text"
+                ng-model="searchText"
+                placeholder="Search students">
+
+            <!-- Sorting -->
+            <select ng-model="sortField">
+
+                <option value="id">
+                    ID
+                </option>
+
+                <option value="name">
+                    Name
+                </option>
+
+                <option value="course">
+                    Course
+                </option>
+
+                <option value="city">
+                    City
+                </option>
+
+                <option value="marks">
+                    Marks
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>$index</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>City</th>
+                    <th>Marks</th>
+                    <th>$odd / $even</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr
+                    ng-repeat="student in students
+                               | filter:searchText
+                               | orderBy:sortField"
+                    ng-class="{
+                        'even-row': $even,
+                        'odd-row': $odd
+                    }">
+
+                    <td>
+                        {{ $index }}
+                    </td>
+
+                    <td>
+                        {{ student.id }}
+                    </td>
+
+                    <td>
+                        {{ student.name }}
+                    </td>
+
+                    <td>
+                        {{ student.course }}
+                    </td>
+
+                    <td>
+                        {{ student.city }}
+                    </td>
+
+                    <td>
+                        {{ student.marks }}
+                    </td>
+
+                    <td>
+
+                        <span ng-if="$even">
+                            Even
+                        </span>
+
+                        <span ng-if="$odd">
+                            Odd
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

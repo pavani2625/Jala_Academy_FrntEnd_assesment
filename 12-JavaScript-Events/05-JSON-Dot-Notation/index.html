@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JSON Dot Notation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JSON Object & Dot Notation</h1>
+
+        <div id="result" class="result"></div>
+
+    </div>
+
+
+    <script>
+
+        // Create a JSON-style object
+        const student = {
+
+            name: "Razeena",
+
+            age: 22,
+
+            course: "Java Full Stack",
+
+            city: "Hyderabad",
+
+            skills: {
+                primary: "Java",
+                secondary: "JavaScript"
+            }
+
+        };
+
+
+        // Access properties using dot notation
+        const name = student.name;
+
+        const age = student.age;
+
+        const course = student.course;
+
+        const city = student.city;
+
+        const primarySkill =
+            student.skills.primary;
+
+
+        // Display the values
+        document.getElementById("result").innerHTML =
+
+            "Name: " + name + "<br>" +
+
+            "Age: " + age + "<br>" +
+
+            "Course: " + course + "<br>" +
+
+            "City: " + city + "<br>" +
+
+            "Primary Skill: " + primarySkill;
+
+    </script>
+
+</body>
+
+</html>

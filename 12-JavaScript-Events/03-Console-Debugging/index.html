@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Console Debugging</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Debugging</h1>
+
+        <p>
+            Open the browser Developer Tools and check
+            the Console tab.
+        </p>
+
+        <button id="debugButton">
+            Run Debugging
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        const button =
+            document.getElementById("debugButton");
+
+        const result =
+            document.getElementById("result");
+
+
+        button.addEventListener("click", function () {
+
+            console.log("Button clicked.");
+
+            let name = "Razeena";
+
+            console.log("Name:", name);
+
+            let number1 = 10;
+            let number2 = 20;
+
+            console.log("Number 1:", number1);
+            console.log("Number 2:", number2);
+
+
+            let sum = number1 + number2;
+
+            console.log("Calculated sum:", sum);
+
+
+            result.textContent =
+                "Sum = " + sum;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

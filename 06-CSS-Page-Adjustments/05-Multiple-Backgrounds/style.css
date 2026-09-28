@@ -1,0 +1,46 @@
+/* Page styling */
+body {
+    margin: 0;
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Multiple background images */
+.background-box {
+
+    background-color: white;
+
+    min-height: 500px;
+
+    padding: 40px;
+
+    background-image:
+        url("background1.jpg"),
+        url("background2.jpg");
+
+    background-size:
+        250px 250px,
+        400px 400px;
+
+    background-position:
+        top left,
+        bottom right;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    border: 3px solid black;
+
+    box-sizing: border-box;
+}

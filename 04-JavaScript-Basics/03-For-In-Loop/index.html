@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript FOR IN Loop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>FOR IN Loop</h1>
+
+        <ul id="studentDetails"></ul>
+
+    </div>
+
+    <script>
+
+        let student = {
+            name: "Razeena",
+            course: "Java Full Stack",
+            city: "Hyderabad",
+            experience: "Fresher"
+        };
+
+        let output = "";
+
+        for (let property in student) {
+
+            output +=
+                "<li><strong>" +
+                property +
+                ":</strong> " +
+                student[property] +
+                "</li>";
+        }
+
+        document.getElementById("studentDetails").innerHTML =
+            output;
+
+    </script>
+
+</body>
+
+</html>

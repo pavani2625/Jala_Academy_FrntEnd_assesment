@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.animated-box {
+    width: 220px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: #333;
+    color: white;
+
+    border-radius: 10px;
+
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes moveBox {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+.pagination {
+    margin: 25px 0;
+}
+
+.pagination a {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    text-decoration: none;
+
+    border: 1px solid #333;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.spaced a {
+    margin: 0 5px;
+}
+
+.no-space {
+    font-size: 0;
+}
+
+.no-space a {
+    margin: 0;
+    font-size: 16px;
+}

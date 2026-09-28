@@ -1,0 +1,45 @@
+/* Page background styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Background color */
+    background-color: #dbeafe;
+
+    /* Background image */
+    background-image: url("background.jpg");
+
+    /* Prevent background from scrolling */
+    background-attachment: fixed;
+
+    /* Specify background image size */
+    background-size: cover;
+
+    /* Prevent image from repeating */
+    background-repeat: no-repeat;
+
+    /* Center the background image */
+    background-position: center;
+}
+
+/* Main content */
+.content {
+    min-height: 1500px;
+    padding: 60px;
+    text-align: center;
+}
+
+/* Content box */
+.box {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 10px;
+}
+
+.space {
+    margin-top: 500px;
+}

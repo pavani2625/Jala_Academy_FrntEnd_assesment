@@ -1,0 +1,28 @@
+/* Styling for the complete page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Main container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    padding: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apiApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS API</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body ng-controller="ApiController">
+
+    <div class="container">
+
+        <h1>AngularJS API</h1>
+
+        <div class="card">
+
+            <h2>Original Text</h2>
+
+            <p>{{ text }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Lowercase</h2>
+
+            <p>{{ lowerText }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Uppercase</h2>
+
+            <p>{{ upperText }}</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

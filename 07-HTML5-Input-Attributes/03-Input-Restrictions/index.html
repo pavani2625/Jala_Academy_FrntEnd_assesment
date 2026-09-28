@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Input Restrictions</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Input Restrictions</h1>
+
+        <form>
+
+            <!-- disabled -->
+            <div class="form-group">
+                <label for="disabledInput">
+                    Disabled:
+                </label>
+
+                <input
+                    type="text"
+                    id="disabledInput"
+                    value="Cannot edit this"
+                    disabled>
+            </div>
+
+
+            <!-- max -->
+            <div class="form-group">
+                <label for="maxValue">
+                    Maximum Value:
+                </label>
+
+                <input
+                    type="number"
+                    id="maxValue"
+                    min="1"
+                    max="100"
+                    value="50">
+            </div>
+
+
+            <!-- maxlength -->
+            <div class="form-group">
+                <label for="maxlengthInput">
+                    Maximum 10 Characters:
+                </label>
+
+                <input
+                    type="text"
+                    id="maxlengthInput"
+                    maxlength="10"
+                    placeholder="10 characters">
+            </div>
+
+
+            <!-- min -->
+            <div class="form-group">
+                <label for="minValue">
+                    Minimum Value:
+                </label>
+
+                <input
+                    type="number"
+                    id="minValue"
+                    min="18"
+                    value="18">
+            </div>
+
+
+            <!-- readonly -->
+            <div class="form-group">
+                <label for="readonlyInput">
+                    Read Only:
+                </label>
+
+                <input
+                    type="text"
+                    id="readonlyInput"
+                    value="Read-only value"
+                    readonly>
+            </div>
+
+
+            <!-- required -->
+            <div class="form-group">
+                <label for="requiredInput">
+                    Required:
+                </label>
+
+                <input
+                    type="text"
+                    id="requiredInput"
+                    placeholder="This field is required"
+                    required>
+            </div>
+
+
+            <!-- size -->
+            <div class="form-group">
+                <label for="sizeInput">
+                    Size:
+                </label>
+
+                <input
+                    type="text"
+                    id="sizeInput"
+                    size="30"
+                    placeholder="Width controlled by size">
+            </div>
+
+
+            <!-- value -->
+            <div class="form-group">
+                <label for="valueInput">
+                    Value:
+                </label>
+
+                <input
+                    type="text"
+                    id="valueInput"
+                    value="Default Value">
+            </div>
+
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.site-header h1,
+.site-header h2 {
+    margin: 5px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main-section,
+.courses,
+.article,
+.sidebar {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.article {
+    border-left: 5px solid #333;
+}
+
+figure {
+    margin: 25px 0;
+}
+
+figure img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+mark {
+    padding: 2px 5px;
+}
+
+
+.sidebar {
+    background-color: #fff8dc;
+}
+
+
+.course-card {
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.site-footer {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.site-footer a {
+    color: white;
+}

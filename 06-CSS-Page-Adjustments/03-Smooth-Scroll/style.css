@@ -1,0 +1,37 @@
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Sections */
+section {
+    min-height: 250px;
+    padding: 40px 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bottom section */
+#bottom {
+    min-height: 300px;
+    padding-top: 80px;
+}

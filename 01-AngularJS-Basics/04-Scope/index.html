@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scopeApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Scope</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>$scope and $rootScope</h1>
+
+        <div
+            class="card"
+            ng-controller="FirstController">
+
+            <h2>First Controller</h2>
+
+            <p>
+                Name from $scope:
+                <strong>{{ name }}</strong>
+            </p>
+
+            <p>
+                Course from $rootScope:
+                <strong>{{ course }}</strong>
+            </p>
+
+        </div>
+
+        <div
+            class="card"
+            ng-controller="SecondController">
+
+            <h2>Second Controller</h2>
+
+            <p>
+                Name from $scope:
+                <strong>{{ name }}</strong>
+            </p>
+
+            <p>
+                Course from $rootScope:
+                <strong>{{ course }}</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

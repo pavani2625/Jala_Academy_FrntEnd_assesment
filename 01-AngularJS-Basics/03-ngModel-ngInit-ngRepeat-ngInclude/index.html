@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Data Binding</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px 0 20px;
+        }
+
+        .student {
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body ng-controller="StudentController">
+
+    <div class="container">
+
+        <h1>AngularJS Data Binding</h1>
+
+        <!-- ng-model -->
+        <h2>ng-model</h2>
+
+        <label>Enter your name:</label>
+
+        <input
+            type="text"
+            ng-model="userName"
+            placeholder="Enter name">
+
+        <p>Hello, {{ userName }}!</p>
+
+
+        <!-- ng-init -->
+        <h2>ng-init</h2>
+
+        <div ng-init="course='Java Full Stack'; city='Hyderabad'">
+
+            <p>Course: {{ course }}</p>
+            <p>City: {{ city }}</p>
+
+        </div>
+
+
+        <!-- ng-repeat -->
+        <h2>ng-repeat</h2>
+
+        <div
+            class="student"
+            ng-repeat="student in students">
+
+            <strong>{{ student.name }}</strong>
+            <br>
+            Course: {{ student.course }}
+            <br>
+            City: {{ student.city }}
+
+        </div>
+
+
+        <!-- ng-include -->
+        <h2>ng-include</h2>
+
+        <div ng-include="'student.html'"></div>
+
+    </div>
+
+</body>
+
+</html>

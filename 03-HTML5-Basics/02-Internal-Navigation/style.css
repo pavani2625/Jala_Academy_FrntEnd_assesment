@@ -1,0 +1,44 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Main division */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Highlighted span */
+.highlight {
+    font-weight: bold;
+}
+
+/* Image */
+.sample-image {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Blockquote */
+blockquote {
+    padding: 15px;
+    border-left: 5px solid #333;
+}

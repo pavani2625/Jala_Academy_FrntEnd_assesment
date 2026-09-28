@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="httpApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS HTTP Methods</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body ng-controller="HttpController">
+
+    <div class="container">
+
+        <h1>AngularJS HTTP Methods</h1>
+
+        <div class="card">
+
+            <h2>GET Request</h2>
+
+            <button ng-click="getData()">
+                Send GET
+            </button>
+
+            <p>{{ getMessage }}</p>
+
+            <p>
+                <strong>Status:</strong>
+                {{ getStatus }}
+            </p>
+
+            <p>
+                <strong>Config URL:</strong>
+                {{ getConfig.url }}
+            </p>
+
+            <pre>{{ getDataResult }}</pre>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>POST Request</h2>
+
+            <button ng-click="postData()">
+                Send POST
+            </button>
+
+            <p>{{ postMessage }}</p>
+
+            <p>
+                <strong>Status:</strong>
+                {{ postStatus }}
+            </p>
+
+            <p>
+                <strong>Config URL:</strong>
+                {{ postConfig.url }}
+            </p>
+
+            <pre>{{ postDataResult }}</pre>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

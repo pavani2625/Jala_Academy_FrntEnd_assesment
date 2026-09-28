@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fruit Sorting</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #fruits {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fruit Array Sorting</h1>
+
+    <p id="fruits"></p>
+
+    <button onclick="sortFruits()">
+        Sort Descending
+    </button>
+
+    <script>
+
+        let fruits = [
+            "Apple",
+            "Banana",
+            "Mango",
+            "Orange",
+            "Grapes",
+            "Papaya"
+        ];
+
+        function displayFruits() {
+
+            document.getElementById("fruits").textContent =
+                fruits.join(", ");
+
+        }
+
+        function sortFruits() {
+
+            fruits.sort().reverse();
+
+            displayFruits();
+
+        }
+
+        displayFruits();
+
+    </script>
+
+</body>
+
+</html>

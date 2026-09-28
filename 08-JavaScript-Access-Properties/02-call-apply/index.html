@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Call and Apply</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript call() and apply()</h1>
+
+        <div class="card">
+
+            <h2>Student Information</h2>
+
+            <button onclick="useCall()">
+                Use call()
+            </button>
+
+            <button onclick="useApply()">
+                Use apply()
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let student = {
+            name: "Razeena",
+            course: "Java Full Stack"
+        };
+
+
+        function introduce(city, experience) {
+
+            return "Name: " + this.name +
+                   " | Course: " + this.course +
+                   " | City: " + city +
+                   " | Experience: " + experience;
+
+        }
+
+
+        function useCall() {
+
+            let result = introduce.call(
+                student,
+                "Hyderabad",
+                "Fresher"
+            );
+
+            document.getElementById("result").textContent =
+                result;
+
+        }
+
+
+        function useApply() {
+
+            let result = introduce.apply(
+                student,
+                [
+                    "Hyderabad",
+                    "Fresher"
+                ]
+            );
+
+            document.getElementById("result").textContent =
+                result;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

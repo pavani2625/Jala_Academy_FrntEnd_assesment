@@ -1,0 +1,54 @@
+/* Page styling */
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+}
+
+/* Font family */
+.font-family {
+    font-family: Georgia, serif;
+}
+
+/* Font size */
+.font-size {
+    font-size: 24px;
+}
+
+/* Font style */
+.font-style {
+    font-style: italic;
+}
+
+/* Font weight */
+.font-weight {
+    font-weight: bold;
+}
+
+/* Text color */
+.text-color {
+    color: #2563eb;
+}
+
+/* Left alignment */
+.left {
+    text-align: left;
+}
+
+/* Center alignment */
+.center {
+    text-align: center;
+}
+
+/* Right alignment */
+.right {
+    text-align: right;
+}

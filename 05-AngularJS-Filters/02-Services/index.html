@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="serviceApp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Services</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body ng-controller="ServiceController">
+
+    <div class="container">
+
+        <h1>AngularJS Services</h1>
+
+        <!-- $location -->
+        <div class="card">
+
+            <h2>$location</h2>
+
+            <p>
+                Current URL:
+                {{ currentUrl }}
+            </p>
+
+        </div>
+
+        <!-- $timeout -->
+        <div class="card">
+
+            <h2>$timeout</h2>
+
+            <p>{{ timeoutMessage }}</p>
+
+        </div>
+
+        <!-- Custom Service -->
+        <div class="card">
+
+            <h2>Custom Service</h2>
+
+            <p>
+                {{ customMessage }}
+            </p>
+
+        </div>
+
+        <!-- $http -->
+        <div class="card">
+
+            <h2>$http</h2>
+
+            <button ng-click="loadData()">
+                Load Data
+            </button>
+
+            <p>{{ httpMessage }}</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

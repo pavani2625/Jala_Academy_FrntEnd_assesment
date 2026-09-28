@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.header,
+.content,
+.footer {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+}
+
+.card {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.highlight {
+    font-weight: bold;
+    background-color: #fff3a3;
+}
+
+.important {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.footer {
+    text-align: center;
+}

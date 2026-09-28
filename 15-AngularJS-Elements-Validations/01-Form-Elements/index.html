@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formApp">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AngularJS Form Elements</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+    </style>
+
+</head>
+
+
+<body ng-controller="FormController">
+
+    <div class="container">
+
+        <h1>AngularJS Form Elements</h1>
+
+
+        <form>
+
+            <!-- Textbox -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    ng-model="student.name"
+                    placeholder="Enter your name">
+
+            </div>
+
+
+            <!-- Selectbox -->
+
+            <div class="form-group">
+
+                <label for="course">
+                    Course
+                </label>
+
+                <select
+                    id="course"
+                    ng-model="student.course">
+
+                    <option value="">
+                        Select a course
+                    </option>
+
+                    <option value="Java Full Stack">
+                        Java Full Stack
+                    </option>
+
+                    <option value="Frontend Development">
+                        Frontend Development
+                    </option>
+
+                    <option value="Python">
+                        Python
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Radio buttons -->
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                            ng-model="student.gender">
+
+                        Female
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            ng-model="student.gender">
+
+                        Male
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Checkbox -->
+
+            <div class="form-group">
+
+                <label>Skills</label>
+
+                <div class="checkbox-group">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            ng-model="student.java">
+
+                        Java
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            ng-model="student.javascript">
+
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            ng-model="student.sql">
+
+                        SQL
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button type="button"
+                    ng-click="showDetails()">
+
+                Show Details
+
+            </button>
+
+        </form>
+
+
+        <div class="output"
+             ng-show="submitted">
+
+            <h2>Selected Details</h2>
+
+            <p>
+                Name: {{ student.name }}
+            </p>
+
+            <p>
+                Course: {{ student.course }}
+            </p>
+
+            <p>
+                Gender: {{ student.gender }}
+            </p>
+
+            <p>
+                Java: {{ student.java }}
+            </p>
+
+            <p>
+                JavaScript: {{ student.javascript }}
+            </p>
+
+            <p>
+                SQL: {{ student.sql }}
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

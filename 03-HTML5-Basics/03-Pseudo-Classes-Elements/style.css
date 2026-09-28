@@ -1,0 +1,75 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin: 25px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Pseudo-class: hover */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Pseudo-class: visited */
+nav a:visited {
+    font-weight: bold;
+}
+
+/* Pseudo-class: first child */
+section p:first-child {
+    font-style: italic;
+}
+
+/* Pseudo-element: first letter */
+section h2::first-letter {
+    font-size: 32px;
+}
+
+/* Pseudo-element: before */
+section h2::before {
+    content: "★ ";
+}
+
+/* Pseudo-element: after */
+section h2::after {
+    content: " ✓";
+}
+
+/* Highlighted text */
+.highlight {
+    font-weight: bold;
+}
+
+/* Image */
+.sample-image {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Blockquote */
+blockquote {
+    padding: 15px;
+    border-left: 5px solid #333;
+}
